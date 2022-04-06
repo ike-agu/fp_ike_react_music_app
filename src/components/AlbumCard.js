@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const AlbumCard = () => {
 
-  const [artistAndAlbum, setArtistAndAlbum] = useState([
+  const [artistAndAlbum, ] = useState([
     {
       name: 'Michael-Jackson',
       song: "Thriller",
@@ -37,7 +37,7 @@ const AlbumCard = () => {
       <td>{A.song}</td>
       <td>{A.year}</td>
       <td>{A.album}</td>
-      <td><img src={A.img} /></td>
+      <td><img src={A.img} alt=""/></td>
     </tr>)
   }
 
