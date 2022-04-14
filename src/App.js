@@ -1,25 +1,25 @@
 import React from 'react';
-import ArtistCard from './components/ArtistCard'
-import AlbumCard from './components/AlbumCard'
-import Footer from './components/Footer'
-import Nav from './components/Nav'
-import Button from './components/Button'
+import { Routes, Route } from  'react-router-dom';
+import * as Pages from './pages';
+import {Layout} from './layout'
+import {artistCard} from './components';
+
 
 
 function App() {
   return (
     <>
-    <Nav />
-    <main className='container'>
-      <h1>Vibe Box</h1>
-      <ArtistCard />
-       <AlbumCard />
-       <Button />
-       <p> Coming soon...</p>
-
-    </main>
-    <Footer />
-    </>
+   <Routes>
+     <Route index element={<Pages.Home />} />
+     <Route path="/" element={ <Layout />}>
+       <Route path="about" element={<Pages.About />} />
+       <Route path="profile" element={<Pages.Profile />} />
+       <Route path="artists" element={<Pages.Artists />} >
+          <Route index element={<artistCard />}/>
+       </Route>
+     </Route>
+   </Routes>
+   </>
   );
 }
 
