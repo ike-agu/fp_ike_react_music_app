@@ -2,7 +2,7 @@ import React from 'react';
 import { Routes, Route } from  'react-router-dom';
 import * as Pages from './pages';
 import {Layout} from './layout'
-import {artistCard} from './components';
+// import {artistCard} from './components';
 
 
 
